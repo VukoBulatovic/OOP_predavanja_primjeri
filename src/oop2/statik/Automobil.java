@@ -1,3 +1,4 @@
+package statik;
 
 public class Automobil {
 
@@ -9,15 +10,28 @@ public class Automobil {
     private int brojSedista;
     private int brojSasije;
     private double kubikaza;
+    private static int brojObjekataOveKlase = 0;  //Ovo mu omogacava da kad napravimo neki objekat on ne ostaje na nuli nego pamti koliko je kreirano objekata i
+                                                    // uvecava ga za 1 u konstruktoru
+
+    //Staticki blok sluzi da se on prvo izvrsi, i on se izvrsava samo JEDNOM
+    static {
+        int x = 2;
+        int y = 3;
+        double nestoCudno = Math.log(x) / Math.log(y);
+        brojObjekataOveKlase = (int) nestoCudno + 2;
+    }
+
 
 //konstruktori
 
-    public Automobil(String marka, String tip, char boja, int brojSedista, int brojSasije, double kubikaza) {
+    public Automobil(String marka, String tip, char boja, int brojSedista, double kubikaza) {
+        brojObjekataOveKlase++;
+
         this.marka = marka;
         this.tip = tip;
         this.boja = boja;
         this.brojSedista = brojSedista;
-        this.brojSasije = brojSasije;
+        this.brojSasije = brojObjekataOveKlase;
         this.kubikaza = kubikaza;
     }
 
@@ -74,8 +88,15 @@ public class Automobil {
         this.kubikaza = kubikaza;
     }
 
+    public static int getBrojObjekataOveKlase() {
+        return brojObjekataOveKlase;
+    }
 
-//Metode
+    public static void setBrojObjekataOveKlase(int brojObjekataOveKlase) {
+        Automobil.brojObjekataOveKlase = brojObjekataOveKlase;
+    }
+
+    //Metode
 
 
     public String informacija(){
@@ -92,11 +113,11 @@ public class Automobil {
 
     public boolean daLiSuIsti(Automobil b){
         if(this.marka.equalsIgnoreCase(b.marka)
-        && this.tip.equalsIgnoreCase(b.tip)
-        && this.boja == b.boja
-        && this.brojSedista == b.brojSedista
-        && this.brojSasije == b.brojSasije
-        && this.kubikaza == b.kubikaza) {
+                && this.tip.equalsIgnoreCase(b.tip)
+                && this.boja == b.boja
+                && this.brojSedista == b.brojSedista
+                && this.brojSasije == b.brojSasije
+                && this.kubikaza == b.kubikaza) {
             return true;
         }
         else return false;

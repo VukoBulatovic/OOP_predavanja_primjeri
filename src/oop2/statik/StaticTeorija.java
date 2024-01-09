@@ -1,3 +1,5 @@
+package statik;
+
 public class StaticTeorija {
 
 
@@ -8,6 +10,9 @@ public class StaticTeorija {
         * Staticke metode i promenljive su vezane za samu KLASU a ne za objekte klase
         *
         * */
+
+
+
 
 
     }
