@@ -1,4 +1,4 @@
-package statik;
+package oop2.statik;
 
 public class Automobil {
 

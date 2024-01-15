@@ -37,20 +37,19 @@ public class Test {
 
         Knjizara delfi = new Knjizara(knjigeNaStanju,zaposleni,autoriKojeIzdaje);
 
+
+        System.out.println("---------------Knjizara: -------------" + "\n");
         System.out.println(delfi);
 
+        System.out.println("---------------Ukupna cena u knjizari: -------------" + "\n");
         System.out.println(delfi.ukupnaCena());
 
-
+        System.out.println("---------------Knjige od autora a1: -------------" + "\n");
         System.out.println(delfi.knjigeOdAutora(a1));
 
         Autor a3 = new Autor(new ArrayList<>());
+        System.out.println("---------------Knjige od autora a3: -------------" + "\n");
         System.out.println(delfi.knjigeOdAutora(a3));
-
-
-
-
-
 
     }
 

@@ -1,4 +1,4 @@
-package oop4.softwareZaSkoluNasledjivanje.osobe2;
+package oop4.softwareZaSkoluNasledjivanje.osobe2SaNasledjivanjem;
 
 public class Osoba {
 
@@ -49,6 +49,7 @@ public class Osoba {
         sb.append("broj godina: ").append(brojGodina);
         return sb.toString();
     }
+
 
 
 

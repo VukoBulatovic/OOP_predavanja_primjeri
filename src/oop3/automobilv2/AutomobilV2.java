@@ -1,4 +1,4 @@
-package automobilv2;
+package oop3.automobilv2;
 
 
 public class AutomobilV2 {

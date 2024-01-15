@@ -1,4 +1,4 @@
-package oop4.softwareZaSkolu;
+package oop4.softwareZaSkoluNasledjivanje;
 
 public class Nasledjivanje {
 
@@ -21,7 +21,21 @@ public class Nasledjivanje {
     *
     * Svaka podklasa moze da naslijedi najvise SAMO JEDNU nadklasu
     * Nadklasa moze da ima koliko hoce podklasa
-    * 
+    *
+    * - Method overriding
+    *
+    * class A {...; public void f(){}...}
+    * class B extends A {...; public void f(){}...}
+    * class C extends B {...; public void f(){}...}
+    *
+    * C objC = new C();
+    * c.f(); <- poziva se implementacija metode f noja je najniza u hijerarhiji klasa.
+    *
+    * -Method overriding - klasa redefinise ponasanje metode koju nasledjuje iz natklase
+    *
+    * Svaka klasa prosiruje Object klasu, ona je na vrhu
+    *
+    *
     * */
 
 

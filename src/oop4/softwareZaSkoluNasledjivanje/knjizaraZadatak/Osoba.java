@@ -1,10 +1,15 @@
-package oop4.softwareZaSkoluNasledjivanje.osobe2SaNasledjivanjem;
+package oop4.softwareZaSkoluNasledjivanje.knjizaraZadatak;
 
 public class Osoba {
 
+
+    //atributi
     private String ime;
     private String prezime;
     private int brojGodina;
+
+    //konstruktori
+
 
     public Osoba(String ime, String prezime, int brojGodina) {
         this.ime = ime;
@@ -15,13 +20,16 @@ public class Osoba {
     public Osoba() {
     }
 
+    //getteri i setteri
+
+
     public String getIme() {
         return ime;
     }
 
     public void setIme(String ime) {
-        if(ime != null && !ime.equalsIgnoreCase(""))
-            this.ime = ime;
+        if(ime != null && ime.equalsIgnoreCase(""))
+         this.ime = ime;
     }
 
     public String getPrezime() {
@@ -29,7 +37,7 @@ public class Osoba {
     }
 
     public void setPrezime(String prezime) {
-        if(prezime != null && !prezime.equalsIgnoreCase(""))
+        if(prezime != null && prezime.equalsIgnoreCase(""))
          this.prezime = prezime;
     }
 
@@ -42,19 +50,20 @@ public class Osoba {
          this.brojGodina = brojGodina;
     }
 
+    //metode
+
+
     @Override
-    public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(ime).append(" ").append(prezime).append("\n");
-        sb.append("broj godina: ").append(brojGodina);
-        return sb.toString();
+    public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(ime).append(" ").append(prezime).append("\n");
+    sb.append("broj godina: ").append(brojGodina);
+    return sb.toString();
     }
 
 
-
-
-
-
-
+    public String imePrezime(){
+        return ime + " " + prezime;
+    }
 
 }

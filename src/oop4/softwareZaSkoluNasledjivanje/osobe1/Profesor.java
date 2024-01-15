@@ -1,4 +1,4 @@
-package oop4.softwareZaSkoluNasledjivanje;
+package oop4.softwareZaSkoluNasledjivanje.osobe1;
 
 public class Profesor {
 
