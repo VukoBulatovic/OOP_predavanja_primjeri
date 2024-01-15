@@ -3,10 +3,21 @@ package oop5.polimorfizam;
 public class Test {
     public static void main(String[] args) {
 
-        Geometrija2D telo1 = new Geometrija2D();
+        Pravougaonik p = new Pravougaonik(2,3);
+        System.out.println(p);
+        System.out.println("================\n");
 
-        Pravougaonik p1 = new Pravougaonik(4,6);
-        System.out.println(p1);
+        Kvadrat k = new Kvadrat(10);
+        System.out.println(k);
+        System.out.println("================\n");
+
+        Elipsa e = new Elipsa(3,4);
+        System.out.println(e);
+        System.out.println("================\n");
+
+        Krug kr = new Krug(5);
+        System.out.println(kr);
+        System.out.println(kr.obim());
 
     }
 }

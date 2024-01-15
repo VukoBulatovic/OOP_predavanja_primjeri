@@ -6,6 +6,7 @@ public class Kvadrat extends Pravougaonik {
 
     public Kvadrat(double a){
         super(a,a);
+        setIme("Kvadrat");
         this.a =a;
     }
 
@@ -18,6 +19,9 @@ public class Kvadrat extends Pravougaonik {
     public void setA(double a) {
         this.a = a;
     }
+
+
+
 
 
 

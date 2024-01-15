@@ -1,17 +1,22 @@
 package oop5.polimorfizam;
 
-public class Pravougaonik extends Geometrija2D {
+public class Elipsa extends Geometrija2D {
 
     private double a;
     private double b;
 
-    public Pravougaonik(double a, double b) {
-        super("Pravougaonik: ");
+    public Elipsa(double a, double b) {
+        super("Elipsa");
+        if(a < b){
+           double t = a;
+            a = b;
+            b = t;
+        }
         this.a = a;
         this.b = b;
     }
 
-    public Pravougaonik(String ime) {
+    public Elipsa(String ime) {
         super(ime);
     }
 
@@ -31,30 +36,23 @@ public class Pravougaonik extends Geometrija2D {
         this.b = b;
     }
 
+    //Obim elipse nije resiv
+
     @Override
     public double povrsina(){
-        return a * b;
+        return a*b*Math.PI;
     }
-
-    @Override
-    public double obim(){
-        return 2*a + 2*b;
-    }
-
-    private String formatirajStranice(){
-        if(a != b)
-            return "Stranice: " + a + " " + b;
-        else return "Stranica: " + a;
-    }
-
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(getIme()).append("\n");
-        sb.append(formatirajStranice()).append("\n");
-        sb.append("Obim = ").append(obim()).append("\n");
+        sb.append("Stranice a i b : ").append(a).append(" ").append(b).append("\n");
         sb.append("Povrsina = ").append(povrsina());
         return sb.toString();
     }
+
+
+
+
 }

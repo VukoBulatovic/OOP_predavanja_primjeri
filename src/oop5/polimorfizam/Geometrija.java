@@ -24,17 +24,23 @@ Geometrija3D
 * */
 public class Geometrija {
 
-    public Geometrija() {
+    private String ime;
+
+    public Geometrija(String ime) {
+        this.ime = ime;
+    }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
     }
 
     public double povrsina(){
         return -1;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Povrsina: ").append(povrsina());
-        return sb.toString();
-    }
+
 }
