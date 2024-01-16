@@ -13,11 +13,13 @@ public class Test {
         o.pokreniSe();
         a.pokreniSe();
 
+
+
+
         /*
         Prednosti (u ovom slucaju) interfejsa u odnosu na abstraktnu natklasu;
         1.Mozemo da kreiramo klasu koja ne implementira metodu pokreniSe();
         2.Mozemo da kreiramo klasu koja
-
 
          */
 
