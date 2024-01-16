@@ -1,5 +1,7 @@
 package oop8.hashcodeIEquals;
 
+import java.util.Objects;
+
 public class Covek extends Object {
 
     private String ime;
@@ -50,14 +52,14 @@ public class Covek extends Object {
     * -Hash funkcije uglavnom NISU "1-1" i tada dolazi do hash kolizija....
     *
     * */
-    @Override
+ /*   @Override
     public int hashCode() {
         return super.hashCode();
     }
 
-    /*
+    *//*
     * Ova metoda vraca odgovor na pitanje da li je prosledjen objekat jednak ovom nasem
-    * */
+    * *//*
     @Override
     public boolean equals(Object o){
         if(this == o)  //da li dele isti memorijski prostor
@@ -71,8 +73,18 @@ public class Covek extends Object {
         if(ime.equals(c.getIme()) && prezime.equals(c.getPrezime()) && brojGodina == c.getBrojGodina())
             return true;
         return false;
+    }*/
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Covek covek = (Covek) o;
+        return brojGodina == covek.brojGodina && Objects.equals(ime, covek.ime) && Objects.equals(prezime, covek.prezime);
     }
 
-
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(ime, prezime, brojGodina);
+    }
 }
