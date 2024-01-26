@@ -8,6 +8,9 @@ public class Test {
         Covek c3 = new Covek("a","a", 25);
         Covek c4 = new Covek("a","a", 20);
 
+
+
+
         if(c1.equals(c4)){
             System.out.println("isti su");
         }
