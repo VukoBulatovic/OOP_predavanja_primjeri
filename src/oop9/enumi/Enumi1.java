@@ -25,6 +25,16 @@ public enum Enumi1 {
     *
     * //metode
     *
+    *   Ugradjene metode nad enumima:
+    *
+    * 1. .values() -> Enum[]    --vraca sve vrednosti tog enum-a
+    * 2. .valueOf(String name) -> Enum     --vraca Enum u zavisnosti od njegovog imena
+    *
+    *
+    *- Imena Enumerisanih tipova su Stringovna reprezentacija tog tipa
+    * XYZ - "XYZ"
+    *
+    *
     *
     */
 
